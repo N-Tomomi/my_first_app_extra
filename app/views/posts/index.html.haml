@@ -1,2 +1,8 @@
 %h1 トップページ
-= @post
+- @posts.each do |post|
+  %div.post
+    %div.post-date  
+    投稿日時：
+    = post.created_at
+    %div.post-content
+    = post.content
