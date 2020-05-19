@@ -1,4 +1,6 @@
 %h1 トップページ
+= link_to new_post_path do 
+  新規投稿
 - @posts.each do |post|
   %div.post
     %div.post-date  
