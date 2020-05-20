@@ -2,11 +2,13 @@
 $white: #fff;
 $headerColor: #2f4f4f;
 
+$headerHight: 80px;
+
 body{
   background-color: #f6f6f6;
   min-width: 650px;
   .header{
-    height: 80px;
+    height: $headerHight;
     width: 100%;
     padding: 0 150px;
     background-color: $headerColor;
@@ -15,16 +17,18 @@ body{
     justify-content: space-between;
     &__title{
       font-size: 30px;
-      line-height: 56px;
+      line-height: $headerHight;
       &--text{
+        font-family: 'Anonymous Pro', monospace;
         text-decoration: none;
         color: $white;
+        font-size: 37px;
       }
     }
     &__right{
       &--btn{
         text-decoration: none;
-        line-height: 56px;
+        line-height: $headerHight;
         color: $white;
         margin-left:15px;
       }
