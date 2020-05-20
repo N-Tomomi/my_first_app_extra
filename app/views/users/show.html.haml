@@ -1,4 +1,6 @@
-%h1 トップページ
+%div.postTitle
+  = @user.nickname 
+  さんの投稿一覧
 - @posts.each do |post|
   %div.content
     %div.content__left
@@ -11,4 +13,3 @@
           = link_to post.user.nickname, user_path(post.user), class: "content__right__bottom--userName--btn"
         %div.content__right__bottom--date
           = post.created_at
-
