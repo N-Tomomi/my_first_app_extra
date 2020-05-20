@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# seedsで初期データ流し込むための記述
 5.times do |i|
   Post.create(content: "投稿記事 #{i}")
 end
