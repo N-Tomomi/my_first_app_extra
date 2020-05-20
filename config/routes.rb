@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  
+  # devise_for :usersの記述により、ログイン・新規登録で必要なルーティングが生成
+  devise_for :users
+
   root to: 'posts#index'
-  
-  resources :posts, only: [:new, :create, :show, :edit, :update]
+  resources :posts, except: :index
   
 end
