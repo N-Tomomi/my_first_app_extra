@@ -21,8 +21,11 @@ body{
       &--text{
         font-family: 'Anonymous Pro', monospace;
         text-decoration: none;
-        color: $white;
+        // color: $white;
         font-size: 37px;
+        background: linear-gradient( to right,  rgb(228, 227, 179) 25%, rgb(221, 139, 187) 75% );
+        -webkit-background-clip: text;
+        color: transparent;
       }
     }
     &__right{
@@ -50,6 +53,7 @@ body{
           height: 55px;
           width: 55px;
           border: solid 1px;
+          background-color: lighten(lightcoral, 10%) ;
         }
       }
       &__right{
