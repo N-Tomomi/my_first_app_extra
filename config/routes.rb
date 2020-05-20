@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
-  # get 'posts', to: 'posts#index'
-  resources :posts
+  root to: 'posts#index'
+  resources :posts, only: [:new, :create]
+  
 end

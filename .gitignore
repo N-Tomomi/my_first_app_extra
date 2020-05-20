@@ -25,3 +25,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# 画像が保管されるpublic/uploadsディレクトリを.gitignoreに追加。画像がGithubにコミットされないようにしている。
+public/uploads/*
+
+# .DS_Storeを.gitignoreに追加。
+.DS_Store

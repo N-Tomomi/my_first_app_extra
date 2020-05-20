@@ -1,10 +1,11 @@
 %h1 トップページ
-= link_to new_post_path do 
-  新規投稿
 - @posts.each do |post|
-  %div.post
-    %div.post-date  
-    投稿日時：
-    = post.created_at
-    %div.post-content
-    = post.content
+  %div.content
+    %div.content__left
+      %div.content__left--image
+    %div.content__right
+      %div.content__right__top
+      = post.title
+      %div.content__right__bottom
+        %div.content__right__bottom--date
+        = post.created_at
