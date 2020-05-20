@@ -8,7 +8,12 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .app-title.navbar.navbar-expand-md.navbar-light.bg-light
-      .navbar-brand MyFirstAppExtra
-    .container
-    = yield
+    %header.header
+      %div.header__title
+        = link_to root_path , class: "header__title--text" do 
+          MyFirstAppExtra
+      %div.header__right
+        = link_to new_post_path , class: "header__right--btn" do 
+          新規投稿
+    %div.contents
+      = yield
