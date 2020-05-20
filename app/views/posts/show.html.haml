@@ -1,0 +1,11 @@
+%div.postTitle
+  = @post.title
+%div.postDate
+  = @post.created_at
+%div.postAuthor
+%div.postManage
+  = link_to "編集", edit_post_path(@post.id), class: "postManage__edit"
+%div.postText
+  = simple_format @post.content
+
+

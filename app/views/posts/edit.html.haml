@@ -1,6 +1,5 @@
-%div.content__title 新規記事の作成
+%div.content__title 投稿の編集
 = form_with model: @post, class: :form, local: true do |f|
   = f.text_field :title, placeholder: :タイトル, class: :form__title
   = f.text_area :content, placeholder: :ブログ本文, class: :form__text, size: "30x10"
   = f.submit '投稿する', class: :form__btn
-
