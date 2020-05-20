@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    # includesメソッドはN+1問題を解消することができる。
+    # 指定された関連モデルをまとめて一緒に取得しておくことで、SQLの発行回数を減らすことができる。
+    @posts = Post.includes(:user)
   end
 
   def new 
@@ -9,6 +11,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    # current_userメソッドはdeviseのヘルパーメソッド
     Post.create(post_params)
     redirect_to root_path
   end
@@ -36,7 +39,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content).merge(user_id: current_user.id)
   end
 
 end

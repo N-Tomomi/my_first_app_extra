@@ -5,8 +5,10 @@
       %div.content__left--image
     %div.content__right
       %div.content__right__top
-      = link_to post.title, post_path(post.id), class: "content__right__top--title"
+        = link_to post.title, post_path(post.id), class: "content__right__top--title"
       %div.content__right__bottom
+        %div.content__right__bottom--userName
+          = post.user.nickname
         %div.content__right__bottom--date
-        = post.created_at
+          = post.created_at
 
