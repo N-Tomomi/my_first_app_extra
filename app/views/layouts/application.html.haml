@@ -12,8 +12,17 @@
       %div.header__title
         = link_to root_path , class: "header__title--text" do 
           MyFirstAppExtra
-      %div.header__right
-        = link_to new_post_path , class: "header__right--btn" do 
-          新規投稿
+      - if user_signed_in?
+        %div.header__right
+          = link_to new_post_path , class: "header__right--btn" do 
+            新規投稿
+          = link_to destroy_user_session_path , method: :delete, class: "header__right--btn" do 
+            ログアウト
+      - else
+        %div.header__right
+          = link_to new_user_session_path , class: "header__right--btn" do 
+            ログイン
+          = link_to new_user_registration_path , class: "header__right--btn" do 
+            新規登録
     %div.contents
       = yield
