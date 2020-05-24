@@ -3,7 +3,11 @@ class PostsController < ApplicationController
   def index
     # includesメソッドはN+1問題を解消することができる。
     # 指定された関連モデルをまとめて一緒に取得しておくことで、SQLの発行回数を減らすことができる。
-    @posts = Post.includes(:user)
+    # @posts = Post.includes(:user)
+    # orderメソッド テーブルから取得してきた複数のレコード情報を持つインスタンスの並び順を変更 order("並び替えの基準となるカラム名 並び順")
+    # @posts = Post.includes(:user).order("created_at DESC")
+    # kaminari を用いて使えるようになったメソッドを利用.page(params[:page]).per(1ページで表示したい件数)
+    @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(4)
   end
 
   def new 
