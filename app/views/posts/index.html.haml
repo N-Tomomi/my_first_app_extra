@@ -11,5 +11,6 @@
           = link_to post.user.nickname, user_path(post.user), class: "content__right__bottom--userName--btn"
         %div.content__right__bottom--date
           = post.created_at
+= paginate(@posts) 
 = javascript_include_tag "post.js"
 

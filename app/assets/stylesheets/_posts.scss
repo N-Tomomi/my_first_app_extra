@@ -4,6 +4,13 @@ $headerColor: #2f4f4f;
 
 $headerHight: 80px;
 
+// scss mixin
+@mixin hover {
+  background: lightgrey;
+  border-radius:100%;
+  transform:rotate(360deg);
+}
+
 body{
   background-color: #f6f6f6;
   min-width: 650px;
@@ -65,6 +72,9 @@ body{
           &--title{
             text-decoration: none;
             color: #000000;
+            &:hover{
+              @include hover;
+            }
           }
         }
         &__bottom{
@@ -131,6 +141,18 @@ body{
     .postText{
       margin: 20px 30px;
     }
+
+    .pagination {
+      span a{
+        margin: 2px 8px;
+        color: tomato;
+        font-weight: bold;
+        &:hover{
+          @include hover;
+        }
+      }
+    }
+
   }
   .form{
     width: 85%;
