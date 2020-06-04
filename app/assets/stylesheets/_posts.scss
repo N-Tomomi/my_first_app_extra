@@ -41,6 +41,10 @@ body{
         line-height: $headerHight;
         color: $white;
         margin-left:15px;
+        .AccountIcon {
+          margin-right: 2px;
+          line-height: $headerHight;
+        }
       }
     }
   }
