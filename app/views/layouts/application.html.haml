@@ -12,6 +12,7 @@
     %header.header
       %div.header__title
         = link_to root_path , class: "header__title--text" do 
+          %span.material-icons.md-24 pets
           MyFirstAppExtra
       - if user_signed_in?
         %div.header__right
@@ -23,8 +24,10 @@
       - else
         %div.header__right
           = link_to new_user_session_path , class: "header__right--btn" do 
+            = image_tag "icon/baseline_account.png", alt: "AccountIcon", class: "AccountIcon"
             ログイン
           = link_to new_user_registration_path , class: "header__right--btn" do 
+            = image_tag "icon/baseline_create.png", alt: "CreateIcon", class: "CreateIcon"
             新規登録
     %div.contents
       = yield
