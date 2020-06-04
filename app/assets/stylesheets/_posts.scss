@@ -1,6 +1,7 @@
 // scss 変数
 $white: #fff;
 $headerColor: #2f4f4f;
+$tomato: tomato;
 
 $headerHight: 80px;
 
@@ -223,4 +224,42 @@ body{
       font-size: 13px;
     }
   }
+
+  .InuFixed {
+    // width: 550px;
+    // height: 200px;
+    z-index: 20;
+    // border: 3px solid $tomato;
+    span {
+      display: none;
+    }
+    a {
+      border: 3px solid $tomato;
+      text-decoration: none;
+      background-color: lightyellow;
+      border-radius: 4%;
+      height: 116px;
+      width: 120px;
+      padding: 15px;
+      text-align: center;
+      bottom: 32px;
+      right: 32px;
+      position: fixed;
+      img {
+        width: 80%;
+        text-align: center;
+      }
+    }
+    &:hover {
+      span{
+        display: inline;
+        font-weight: bold;
+        color: darkgreen;
+      }
+      a {
+        background-color: lightpink;
+      }
+    }
+  }
+  
 }

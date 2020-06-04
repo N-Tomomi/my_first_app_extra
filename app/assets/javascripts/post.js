@@ -24,5 +24,5 @@
   //   document.getElementById('target').style.color = 'red';
   // });
 
-  // ここまでJS実験用　index.html.haml #target
+  // ここまでJS実験用 index.html.haml #target
 }
